@@ -20,7 +20,8 @@
             android:layout_height="match_parent"
             android:visibility="gone"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/first_view">
 
             <TextView
                 android:layout_width="match_parent"
@@ -48,7 +49,8 @@
                 android:paddingRight="60dp"
                 android:layout_marginTop="80dp"
                 android:textSize="20sp"
-                android:textColor="#fff"/>
+                android:textColor="#fff"
+                android:onClick="gotoQuestions"/>
 
         </LinearLayout>
 
@@ -57,14 +59,16 @@
             android:layout_height="match_parent"
             android:visibility="visible"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/second_view">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pytanie Pytanie Pytanie Pytanie Pytanie Pytanie ?"
                 android:textSize="26sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/question_field"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -72,12 +76,13 @@
                 android:layout_marginTop="20dp"
                 android:id="@+id/text_edit"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="wpisz odpowiedź"/>
+                    android:hint="wpisz odpowiedź"
+                    android:id="@+id/answer"/>
 
             </LinearLayout>
 
@@ -86,16 +91,14 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:id="@+id/radio_buttons"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        style="@style/questionRadio"
                         android:text="0 zębów"/>
 
                     <RadioButton
@@ -126,7 +129,7 @@
                 android:layout_marginTop="20dp"
                 android:id="@+id/check_boxes"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -159,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:text="Dalej"
                 android:background="@color/colorPrimary"
+                android:onClick="nextQuestion"
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
                 android:layout_marginTop="80dp"
@@ -172,7 +176,8 @@
             android:layout_height="match_parent"
             android:visibility="gone"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/third_view">
 
             <TextView
                 android:layout_width="match_parent"
