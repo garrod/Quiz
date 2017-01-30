@@ -91,32 +91,27 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:id="@+id/radio_buttons"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/radio_group">
 
                     <RadioButton
                         style="@style/questionRadio"
                         android:text="0 zębów"/>
 
                     <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        style="@style/questionRadio"
                         android:text="2 zęby"/>
 
                     <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        style="@style/questionRadio"
                         android:text="5 zębów"/>
 
                     <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        style="@style/questionRadio"
                         android:text="12 zębów"/>
 
                 </RadioGroup>
